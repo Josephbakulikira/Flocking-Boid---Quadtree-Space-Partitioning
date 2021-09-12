@@ -15,9 +15,9 @@ def Limit(vec, max_mag):
 
     return temp
 
-v = Vector2(10, 20)
-v = Limit(v, 5)
-print(v)
+#v = Vector2(10, 20)
+#v = Limit(v, 5)
+#print(v)
 def Heading(vec):
     angle = atan2(vec.y, vec.x)
     return angle

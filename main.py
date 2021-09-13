@@ -22,7 +22,7 @@ for i in range(SIZE):
 
     flock.Append(Boid(pos, flock))
 
-showQuadTree = False
+showQuadTree = True
 SwitchRange = 1
 run = True
 while run:

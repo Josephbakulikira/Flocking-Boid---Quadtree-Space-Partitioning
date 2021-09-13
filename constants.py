@@ -1,4 +1,4 @@
-Width, Height = 1920, 1080
+Width, Height = 800, 800
 Resolution = (Width, Height)
 
 NODE_CAPACITY = 8

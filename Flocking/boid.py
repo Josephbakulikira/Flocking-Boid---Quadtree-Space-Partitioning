@@ -107,7 +107,7 @@ class Boid:
             if dist > 0 and dist < neighbourDistance:
                 steering += boid.velocity
                 total += 1
-                boid.hue = self.flock.HUE
+                boid.hue = self.flock.HUE * 2
 
 
         if total > 0:
@@ -130,7 +130,7 @@ class Boid:
             if dist > 0 and dist < neighbourDistance:
                 steering += boid.position
                 total += 1
-                boid.hue = self.flock.HUE
+                boid.hue = self.flock.HUE * 3
 
         if total > 0:
             steering /= total

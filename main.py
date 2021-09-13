@@ -16,7 +16,8 @@ fps = 1000
 flock = Flock(screen)
 
 for i in range(SIZE):
-    pos = Vector2(randint(0, Width), randint(0, Height))
+    offset = 200
+    pos = Vector2(randint(offset, Width-offset), randint(offset, Height-offset))
     # pos = Vector2(Width/2, Height/2)
 
     flock.Append(Boid(pos, flock))

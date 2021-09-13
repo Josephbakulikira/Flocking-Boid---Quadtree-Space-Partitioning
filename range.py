@@ -8,12 +8,13 @@ class Rectangle:
         self.scale = scale
         self.color = (255, 255, 255)
         self.lineThickness = 1
+        self.name = "rectangle"
 
     def containsParticle(self, particle):
         x, y = particle.position
         bx, by = self.position
         w, h = self.scale
-        if x >= bx and x <= bx+w and y >= by and y <= by+h:
+        if x > bx and x < bx+w and y > by and y < by+h:
             return True
         else:
             return False
@@ -41,6 +42,7 @@ class Circle:
         self.scale = None
         self.color = (255, 255, 255)
         self.lineThickness = 1
+        self.name = "circle"
 
     def containsParticle(self, particle):
         x1, y1 = self.position

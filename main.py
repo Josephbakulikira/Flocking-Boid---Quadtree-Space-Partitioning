@@ -17,9 +17,12 @@ flock = Flock(screen)
 
 for i in range(SIZE):
     pos = Vector2(randint(0, Width), randint(0, Height))
+    # pos = Vector2(Width/2, Height/2)
+
     flock.Append(Boid(pos, flock))
 
 showQuadTree = False
+SwitchRange = 1
 run = True
 while run:
     screen.fill(Color1)
@@ -52,6 +55,8 @@ while run:
                 flock.showRange = not flock.showRange
             if event.key == pygame.K_t:
                 flock.showTrail = not flock.showTrail
+            if event.key == pygame.K_s:
+                flock.rangeIndex = (flock.rangeIndex + 1) % 2
     # -----------------------------
 
     flock.Simulate()

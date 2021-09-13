@@ -1,7 +1,7 @@
 Width, Height = 1920, 1080
 Resolution = (Width, Height)
 
-NODE_CAPACITY = 1
+NODE_CAPACITY = 6
 RADIUS = 2
 
 SIZE = 100

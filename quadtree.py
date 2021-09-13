@@ -80,10 +80,10 @@ class QuadTree:
     def queryRange(self, _range):
         particlesInRange = []
 
-        if type(_range) == Circle:
+        if _range.name == "circle":
             if _range.intersects(self.boundary)==False:
                 return particlesInRange
-        elif type(_range) == Rectangle:
+        else:
             if _range.intersects(self.boundary)==True:
                 return particlesInRange
 
@@ -95,6 +95,8 @@ class QuadTree:
             particlesInRange += self.northEast.queryRange(_range)
             particlesInRange += self.southWest.queryRange(_range)
             particlesInRange += self.southEast.queryRange(_range)
+        return particlesInRange
+        
 
         # if self.boundary.intersects(_range):
         #     return particlesInRange
@@ -110,7 +112,6 @@ class QuadTree:
         #         particlesInRange += self.southEast.queryRange(_range)
         #
         #     return particlesInRange
-        return particlesInRange
 
     def Show(self, screen):
         self.boundary.color = self.color
